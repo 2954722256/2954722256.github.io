@@ -1,14 +1,16 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
 <script src="../lib/vue.min.js"></script>
 <div id="app">
-    <input type="text" v-model="msg">
-    {{msg}}
+    <div v-html="someHTML">
+
+    </div>
 </div>
 <script>
     new Vue({
         el: '#app',
         data: {
-            msg:'hello vue'
+            someHTML:'<input type="text">'
         }
     })
 </script>

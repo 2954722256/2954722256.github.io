@@ -1,14 +1,16 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
 <script src="../lib/vue.min.js"></script>
 <div id="app">
-    <input type="text" v-model="msg">
-    {{msg}}
+    <textarea cols="150" rows="20" v-model="htmlSource"></textarea>
+    <div v-html="htmlSource"></div>
 </div>
+
 <script>
     new Vue({
         el: '#app',
         data: {
-            msg:'hello vue'
+            htmlSource:'<div><img src="https://vuefe.cn/images/logo.png"></div>'
         }
     })
 </script>

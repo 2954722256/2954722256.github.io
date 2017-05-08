@@ -1,14 +1,19 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
 <script src="../lib/vue.min.js"></script>
 <div id="app">
-    <input type="text" v-model="msg">
-    {{msg}}
+    {{ numBigThanZero }}
 </div>
 <script>
     new Vue({
         el: '#app',
         data: {
-            msg:'hello vue'
+            num: 2
+        },
+        computed: {
+            numBigThanZero: function () {
+                return this.num > 0 ? true : false;
+            }
         }
     })
 </script>
