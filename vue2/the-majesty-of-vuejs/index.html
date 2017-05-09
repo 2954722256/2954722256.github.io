@@ -1,0 +1,66 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
+
+<ul class="nav">
+
+
+    <!--<li onclick="clickDiv('div1')">1 The Majesty of Vue.js.pdf</li>-->
+    <!--<div id="div1" >-->
+        <!--<div>-->
+            <!--<a class="urlTxt" href="The Majesty of Vue.js.pdf" target="_blank">The Majesty of Vue.js.pdf</a>-->
+            <!--&lt;!&ndash;<div class="explain">[The Majesty of Vue.js.pdf] 对应的pdf文件</div>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<hr style="margin: 20px 0;">-->
+    <!--</div>-->
+
+    <!--<li onclick="clickDiv('div2')">2 chapter2</li>-->
+    <!--<div id="div2" hidden>-->
+        <!--<div>-->
+            <!--<a class="urlTxt" href="codes/chapter2.html" target="_blank">chapter2</a>-->
+            <!--<div class="explain">显示变量, 动态绑定input给变量</div>-->
+        <!--</div>-->
+        <!--<hr style="margin: 20px 0;">-->
+    <!--</div>-->
+
+
+    <!--<li onclick="clickDiv('div3')">3 chapter3</li>-->
+    <!--<div id="div3" >-->
+        <!--<div>-->
+            <!--<a class="urlTxt" href="codes/chapter3/3.1.html" target="_blank">3.1.html</a>-->
+            <!--<div class="explain">动态设置id为app的下面的变量</div>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<a class="urlTxt" href="codes/chapter3/3.2.html" target="_blank">3.2.html</a>-->
+            <!--<div class="explain">xxx</div>-->
+        <!--</div>-->
+        <!--<div>-->
+            <!--<a class="urlTxt" href="codes/chapter3/3.3.html" target="_blank">3.3.html</a>-->
+            <!--<div class="explain">xxx</div>-->
+        <!--</div>-->
+        <!--<hr style="margin: 20px 0;">-->
+    <!--</div>-->
+
+</ul>
+
+<script type="text/javascript">
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>
