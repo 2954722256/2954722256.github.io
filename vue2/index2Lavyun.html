@@ -15,7 +15,7 @@
 <ul class="nav">
 
     <li onclick="clickDiv('div2')">2 HelloVue</li>
-    <div id="div2">
+    <div id="div2" hidden>
         <li hidden>
             <a class="urlTxt" href="lavyun\2-HelloVue\readme.md" target="_blank">readme</a>
         </li>
@@ -32,7 +32,7 @@
 
 
     <li onclick="clickDiv('div3')">3 模板语法</li>
-    <div id="div3">
+    <div id="div3" hidden>
         <li>
             <a class="urlTxt" href="lavyun\3-模板语法\demo1.html" target="_blank">demo1</a>
             <div class="explain">v-html : 直接插入html</div>
@@ -61,30 +61,72 @@
     </div>
 
     <li onclick="clickDiv('div4')">4 计算属性</li>
-    <div id="div4">
+    <div id="div4" hidden>
         <li>
             <a class="urlTxt" href="lavyun\4-计算属性\demo1.html" target="_blank">demo1</a>
             <div class="explain">computed计算属性, 里面可以写方法, 外部调用 (和methods类似, 自己不太清除区别)</div>
         </li>
         <li>
             <a class="urlTxt" href="lavyun\4-计算属性\demo2.html" target="_blank">demo2</a>
-            <div class="explain">xxx</div>
+            <div class="explain">计算属性默认只有getter, 要给方法设置值,可以写setter方法</div>
         </li>
         <li>
             <a class="urlTxt" href="lavyun\4-计算属性\demo3.html" target="_blank">demo3</a>
-            <div class="explain">xxx</div>
+            <div class="explain">v-model一个input, 动态求出和显示input的长度</div>
         </li>
         <li>
             <a class="urlTxt" href="lavyun\4-计算属性\demo4.html" target="_blank">demo4</a>
-            <div class="explain">xxx</div>
+            <div class="explain">v-model一个input, computed的方法,用正则动态计算一些信息</div>
         </li>
         <li>
             <a class="urlTxt" href="lavyun\4-计算属性\demo5.html" target="_blank">demo5</a>
-            <div class="explain">xxx</div>
+            <div class="explain">v-model一个input, watch,用正则动态计算一些信息</div>
         </li>
         <hr style="margin: 20px 0;">
     </div>
 
+    <li onclick="clickDiv('div5')">5 Class与Style绑定</li>
+    <div id="div5" hidden>
+        <li>
+            <a class="urlTxt" href="lavyun\5-Class与Style绑定\demo1.html" target="_blank">demo1</a>
+            <div class="explain">动态设置class的css相关style属性</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\5-Class与Style绑定\demo2.html" target="_blank">demo2</a>
+            <div class="explain">通过返回值, 动态控制class对应的style属性</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\5-Class与Style绑定\demo3.html" target="_blank">demo3</a>
+            <div class="explain">通过动态设置图片url, 实现简单的轮播图切换</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\5-Class与Style绑定\demo4.html" target="_blank">demo4</a>
+            <div class="explain">style绑定一个数组, 通过数组去设置属性</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div6')">6 条件渲染</li>
+    <div id="div6" hidden>
+        <li>
+            <a class="urlTxt" href="#" target="_blank">demo1</a>
+            <div class="explain">暂时没有内容</div>        </li>
+
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div7')">7 列表渲染</li>
+    <div id="div7" >
+        <li>
+            <a class="urlTxt" href="lavyun\7-列表渲染\demo1.html" target="_blank">demo1</a>
+            <div class="explain">用v-for="(item, index) in items",  for循环设置style</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\7-列表渲染\demo2.html" target="_blank">demo2</a>
+            <div class="explain">动态修改数组, 要用 Vue.set() 来设置</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
 
 </ul>
 
