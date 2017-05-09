@@ -1,5 +1,8 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>-->
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+
 
 <style>
     .explain {
@@ -116,7 +119,7 @@
     </div>
 
     <li onclick="clickDiv('div7')">7 列表渲染</li>
-    <div id="div7" >
+    <div id="div7" hidden>
         <li>
             <a class="urlTxt" href="lavyun\7-列表渲染\demo1.html" target="_blank">demo1</a>
             <div class="explain">用v-for="(item, index) in items",  for循环设置style</div>
@@ -124,6 +127,15 @@
         <li>
             <a class="urlTxt" href="lavyun\7-列表渲染\demo2.html" target="_blank">demo2</a>
             <div class="explain">动态修改数组, 要用 Vue.set() 来设置</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div8')">8 列表渲染</li>
+    <div id="div8" >
+        <li>
+            <a class="urlTxt" href="lavyun\8-事件处理器\demo1.html" target="_blank">demo1</a>
+            <div class="explain">用v-for="(item, index) in items",  for循环设置style</div>
         </li>
         <hr style="margin: 20px 0;">
     </div>
@@ -138,7 +150,5 @@
         }else{
             $("#"+name).show(300);
         }
-
     }
-
 </script>
