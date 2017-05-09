@@ -1,0 +1,62 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
+
+<ul class="nav">
+
+    <li onclick="clickDiv('div1')">1 vue2 begin</li>
+    <div id="div1" hidden>
+        <li>
+            <a class="urlTxt" href="a1_Hello.html" target="_blank">a1_Hello</a>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="a2_v-bind.html" target="_blank">a2_v-bind</a>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="a3_v-if.html" target="_blank">a3_v-if</a></li>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="a4_v-for.html" target="_blank">a4_v-for</a></li>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="a5_v-on.html" target="_blank">a5_v-on</a></li>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="a6_v-model.html" target="_blank">a6_v-model</a></li>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="a7_component.html" target="_blank">a7_component</a></li>
+            <div class="explain">xxx</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+</ul>
+
+<script type="text/javascript">
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>

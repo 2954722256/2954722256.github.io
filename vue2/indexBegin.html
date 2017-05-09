@@ -1,4 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 
 <ul class="nav">
 
@@ -12,5 +13,66 @@
     <li><a href="begin/a7_component.html" target="_blank">a7_component</a></li>
     <hr style="margin: 20px 0;">
 
+</ul>
+
+
+
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
+
+<ul class="nav">
+
+    <li onclick="clickDiv('div1')">1 vue2 begin</li>
+    <div id="div1" hidden>
+        <li>
+            <a class="urlTxt" href="begin/a1_Hello.html" target="_blank">a1_Hello</a>
+            <div class="explain">xxx</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
 
 </ul>
+
+<script type="text/javascript">
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>

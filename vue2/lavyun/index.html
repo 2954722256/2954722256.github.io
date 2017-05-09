@@ -1,0 +1,151 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
+
+<ul class="nav">
+
+    <li onclick="clickDiv('div2')">2 HelloVue</li>
+    <div id="div2" hidden>
+        <li hidden>
+            <a class="urlTxt" href="2-HelloVue\readme.md" target="_blank">readme</a>
+        </li>
+        <li>
+            <a class="urlTxt" href="2-HelloVue\demo1.html" target="_blank">demo1</a>
+            <div class="explain">@click : 点击事件, 修改绑定的值, 会修改页面的值 (类似观察者)</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="2-HelloVue\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model : 获得input的值</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+
+    <li onclick="clickDiv('div3')">3 模板语法</li>
+    <div id="div3" hidden>
+        <li>
+            <a class="urlTxt" href="3-模板语法\demo1.html" target="_blank">demo1</a>
+            <div class="explain">v-html : 直接插入html</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="3-模板语法\demo2.html" target="_blank">demo2</a>
+            <div class="explain">v-model + v-html : 表单输入绑定, 动态修改页面的html</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="3-模板语法\demo3.html" target="_blank">demo3</a>
+            <div class="explain">v-bind : 数据绑定, 数据更新, 页面也会更新</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="3-模板语法\demo4.html" target="_blank">demo4</a>
+            <div class="explain">通过input的type和对应的名字绑定, 动态改变input标签的type属性(前面输入框输入, radio, file,checkbox 等)</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="3-模板语法\demo5.html" target="_blank">demo5</a>
+            <div class="explain">过滤器方法,传入变量, 返回true,false (应该也可以返回其他的东西, 自己返回了一个字符串)</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="3-模板语法\demo6.html" target="_blank">demo6</a>
+            <div class="explain">过滤器 可以传入参数, 获取参数处理后, 返回</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div4')">4 计算属性</li>
+    <div id="div4" hidden>
+        <li>
+            <a class="urlTxt" href="4-计算属性\demo1.html" target="_blank">demo1</a>
+            <div class="explain">computed计算属性, 里面可以写方法, 外部调用 (和methods类似, 自己不太清除区别)</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="4-计算属性\demo2.html" target="_blank">demo2</a>
+            <div class="explain">计算属性默认只有getter, 要给方法设置值,可以写setter方法</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="4-计算属性\demo3.html" target="_blank">demo3</a>
+            <div class="explain">v-model一个input, 动态求出和显示input的长度</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="4-计算属性\demo4.html" target="_blank">demo4</a>
+            <div class="explain">v-model一个input, computed的方法,用正则动态计算一些信息</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="4-计算属性\demo5.html" target="_blank">demo5</a>
+            <div class="explain">v-model一个input, watch,用正则动态计算一些信息</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div5')">5 Class与Style绑定</li>
+    <div id="div5" hidden>
+        <li>
+            <a class="urlTxt" href="5-Class与Style绑定\demo1.html" target="_blank">demo1</a>
+            <div class="explain">动态设置class的css相关style属性</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="5-Class与Style绑定\demo2.html" target="_blank">demo2</a>
+            <div class="explain">通过返回值, 动态控制class对应的style属性</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="5-Class与Style绑定\demo3.html" target="_blank">demo3</a>
+            <div class="explain">通过动态设置图片url, 实现简单的轮播图切换</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="5-Class与Style绑定\demo4.html" target="_blank">demo4</a>
+            <div class="explain">style绑定一个数组, 通过数组去设置属性</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div6')">6 条件渲染</li>
+    <div id="div6" hidden>
+        <li>
+            <a class="urlTxt" href="#" target="_blank">demo1</a>
+            <div class="explain">暂时没有内容</div>        </li>
+
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div7')">7 列表渲染</li>
+    <div id="div7" hidden>
+        <li>
+            <a class="urlTxt" href="7-列表渲染\demo1.html" target="_blank">demo1</a>
+            <div class="explain">用v-for="(item, index) in items",  for循环设置style</div>
+        </li>
+        <li>
+            <a class="urlTxt" href="7-列表渲染\demo2.html" target="_blank">demo2</a>
+            <div class="explain">动态修改数组, 要用 Vue.set() 来设置</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div8')">8-事件处理器</li>
+    <div id="div8" >
+        <li>
+            <a class="urlTxt" href="8-事件处理器\demo1.html" target="_blank">demo1</a>
+            <div class="explain">只是@input处理, 和前面类似 (readme和demo不一致)</div>
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+</ul>
+
+<script type="text/javascript">
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>
