@@ -1,13 +1,57 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
 
 <ul class="nav">
 
-    <li>begin</li>
-    <li><a href="begin/index.html" target="_blank">begin</a></li>
-    <hr style="margin: 20px 0;">
+    <li onclick="clickDiv('div1')">1 自己的一些demo</li>
+    <div id="div1" >
+        <li>
+            <a class="urlTxt" href="begin/index.html" target="_blank">begin</a>
+            <!--<div class="explain">自己的一些demo</div>-->
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
 
-    <li>lavyun 的学习笔记 </li>
-    <li><a href="lavyun/index.html" target="_blank">Lavyun</a></li>
 
+    <li onclick="clickDiv('div2')">2 lavyun 的学习笔记</li>
+    <div id="div2" >
+        <li>
+            <a class="urlTxt" href="lavyun/index.html" target="_blank">lavyun</a>
+            <!--<div class="explain">lavyun 的学习笔记</div>-->
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+
+    <li onclick="clickDiv('div3')">3 the-majesty-of-vuejs-2</li>
+    <div id="div3" >
+        <li>
+            <a class="urlTxt" href="the-majesty-of-vuejs-2/index.html" target="_blank">a1_Hello</a>
+            <!--<div class="explain">动态设置id为app的下面的变量</div>-->
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
 
 </ul>
+
+<script type="text/javascript">
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>
