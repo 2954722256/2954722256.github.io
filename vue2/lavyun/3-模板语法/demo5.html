@@ -2,8 +2,10 @@
 
 <script src="../lib/vue.min.js"></script>
 <div id="app">
+    <!--{{isEven}}-->
     {{ num1 | isEven }}
     {{ num2 | isEven }}
+    {{ num3 | isEven }}
 </div>
 
 <script>
@@ -11,14 +13,24 @@
         el: '#app',
         data: {
             num1: 1,
-            num2: 2
+            num2: 2,
+            num3: 3
         },
         filters:{
+//            isEven:function(value){ //判断是不是偶数的过滤器
+//                if(value%2==0){
+//                    return true;
+//                } else {
+//                    return false;
+//                }
+//            }
             isEven:function(value){ //判断是不是偶数的过滤器
-                if(value%2==0){
+                if(value%6==2){
                     return true;
-                } else {
+                } else if (value%6 == 1){
                     return false;
+                } else {
+                    return "不知道";
                 }
             }
         }

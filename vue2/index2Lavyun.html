@@ -1,21 +1,95 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size:24px;
+    }
+
+</style>
 
 <ul class="nav">
 
-    <li>hello</li>
-    <li><a href="lavyun\2-HelloVue\demo1.html" target="_blank">demo1</a></li>
-    <li><a href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a></li>
+    <li>HelloVue</li>
+    <li hidden>
+        <a class="urlTxt" href="lavyun\2-HelloVue\readme.md" target="_blank">readme</a>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\2-HelloVue\demo1.html" target="_blank">demo1</a>
+        <div class="explain">@click : 点击事件, 修改绑定的值, 会修改页面的值 (类似观察者)</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\2-HelloVue\demo2.html" target="_blank">demo2</a>
+        <div class="explain">v-model : 获得input的值</div>
+    </li>
     <hr style="margin: 20px 0;">
 
-    <li>hello</li>
-    <li><a href="lavyun\3-模板语法\demo1.html" target="_blank">demo1</a></li>
-    <li><a href="lavyun\3-模板语法\demo2.html" target="_blank">demo2</a></li>
-    <li><a href="lavyun\3-模板语法\demo3.html" target="_blank">demo3</a></li>
-    <li><a href="lavyun\3-模板语法\demo4.html" target="_blank">demo4</a></li>
-    <li><a href="lavyun\3-模板语法\demo5.html" target="_blank">demo5</a></li>
-    <li><a href="lavyun\3-模板语法\demo6.html" target="_blank">demo6</a></li>
-
+    <li>模板语法</li>
+    <li>
+        <a class="urlTxt" href="lavyun\3-模板语法\demo1.html" target="_blank">demo1</a>
+        <div class="explain">v-html : 直接插入html</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\3-模板语法\demo2.html" target="_blank">demo2</a>
+        <div class="explain">v-model + v-html : 表单输入绑定, 动态修改页面的html</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\3-模板语法\demo3.html" target="_blank">demo3</a>
+        <div class="explain">v-bind : 数据绑定, 数据更新, 页面也会更新</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\3-模板语法\demo4.html" target="_blank">demo4</a>
+        <div class="explain">通过input的type和对应的名字绑定,  动态改变input标签的type属性(前面输入框输入, radio, file,checkbox 等)</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\3-模板语法\demo5.html" target="_blank">demo5</a>
+        <div class="explain">过滤器方法,传入变量, 返回true,false (应该也可以返回其他的东西, 自己返回了一个字符串)</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\3-模板语法\demo6.html" target="_blank">demo6</a>
+        <div class="explain">过滤器 可以传入参数, 获取参数处理后, 返回</div>
+    </li>
     <hr style="margin: 20px 0;">
+
+
+    <li>计算属性</li>
+    <li>
+        <a class="urlTxt" href="lavyun\4-计算属性\demo1.html" target="_blank">demo1</a>
+        <div class="explain">computed计算属性, 里面可以写方法, 外部调用 (和methods类似, 自己不太清除区别)</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\4-计算属性\demo2.html" target="_blank">demo2</a>
+        <div class="explain">xxx</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\4-计算属性\demo3.html" target="_blank">demo3</a>
+        <div class="explain">xxx</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\4-计算属性\demo4.html" target="_blank">demo4</a>
+        <div class="explain">xxx</div>
+    </li>
+    <li>
+        <a class="urlTxt" href="lavyun\4-计算属性\demo5.html" target="_blank">demo5</a>
+        <div class="explain">xxx</div>
+    </li>
+    <hr style="margin: 20px 0;">
+
 
 
 </ul>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#hide").click(function(){
+            $("p").hide();
+        });
+        $("#show").click(function(){
+            $("p").show();
+        });
+    });
+</script>

@@ -4,6 +4,7 @@
 <div id="app">
     {{ num1 | bigThan(4) }}
     {{ num2 | bigThan(1) }}
+    {{ num2 | bigThan(2) }}
 </div>
 
 <script>
@@ -17,8 +18,10 @@
             bigThan: function (value, num) { //判断是不是大于某个数的过滤器
                 if (value > num) {
                     return true;
-                } else {
+                } else if( value < num){
                     return false;
+                } else{
+                    return "相等";
                 }
             }
         }
