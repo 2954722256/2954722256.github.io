@@ -92,7 +92,7 @@
     </div>
 
     <li onclick="clickDiv('div6')">6 chapter6</li>
-    <div id="div6" >
+    <div id="div6" hidden>
         <div>
             <a class="urlTxt" href="codes/chapter6/6.1.html" target="_blank">6.1.html</a>
             <div class="explain">v-for="story in methodName('var')" 调用方法获得list (页面用的bootstrap)</div>
@@ -103,15 +103,41 @@
         </div>
         <div>
             <a class="urlTxt" href="codes/chapter6/6.3.html" target="_blank">6.3.html</a>
-            <div class="explain">xxx</div>
+            <div class="explain">computed下方法中, 简单的过滤器, 实现数组中数据的过滤</div>
         </div>
         <div>
             <a class="urlTxt" href="codes/chapter6/6.4.html" target="_blank">6.4.html</a>
-            <div class="explain">xxx</div>
+            <div class="explain">v-for 中调用 {{inVar | filterFunc}} , 实现数据拼接过滤</div>
         </div>
         <div>
             <a class="urlTxt" href="codes/chapter6/6.5.html" target="_blank">6.5.html</a>
-            <div class="explain"> xxx</div>
+            <div class="explain"> 使用computed的方法, 和一般方式的方法, 排序</div>
+        </div>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div7')">7 chapter7</li>
+    <div id="div7" >
+
+        <div>
+            <a class="urlTxt" href="codes/chapter7/7.2.html" target="_blank">7.2.html</a>
+            <div class="explain"> 给component动态添加template模版, 设置html (自定义元素 story)</div>
+        </div>
+        <div>
+            <a class="urlTxt" href="codes/chapter7/7.3.html" target="_blank">7.3.html</a>
+            <div class="explain">给component动态添加template模版, 将template通过id方式, 写在外部 (自定义元素 story)</div>
+        </div>
+        <div>
+            <a class="urlTxt" href="codes/chapter7/7.4.html" target="_blank">7.4.html</a>
+            <div class="explain">v-bind添加数据, template添加模版, 通过component连接对应的元素 (自定义元素 story)</div>
+        </div>
+        <div>
+            <a class="urlTxt" href="codes/chapter7/7.5.html" target="_blank">7.5.html</a>
+            <div class="explain"> 使用computed的方法, 和一般方式的方法, 排序</div>
+        </div>
+        <div>
+            <a class="urlTxt" href="codes/chapter7/7.6.html" target="_blank">7.6.html</a>
+            <div class="explain">component中写方法, 调用动态修改数据</div>
         </div>
         <hr style="margin: 20px 0;">
     </div>
