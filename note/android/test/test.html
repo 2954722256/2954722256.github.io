@@ -7,7 +7,8 @@
     <script src="https://unpkg.com/marked@0.3.6"></script>
     <script src="https://unpkg.com/lodash@4.16.0"></script>
     <!-- Delete ".min" for console warnings in development -->
-    <script src="../../dist/vue.min.js"></script>
+    <!--<script src="../../dist/vue.min.js"></script>-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
 <body>
 
@@ -17,8 +18,7 @@
 </div>
 
 <script>
-    var indata =
-        "# hello \ndasdjasjd";
+    var indata = "# hello \ndasdjasjd";
 
     new Vue({
         el: '#editor',
