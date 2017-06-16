@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js markdown editor example</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/marked@0.3.6"></script>
+    <script src="https://unpkg.com/lodash@4.16.0"></script>
+    <!-- Delete ".min" for console warnings in development -->
+    <!--<script src="../../dist/vue.min.js"></script>-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="editor">
+    <textarea :value="input" @input="update"></textarea>
+    <div v-html="compiledMarkdown"></div>
+</div>
+
+<script>
+    var indata =
+        "# 一些图片 " +
+        "\n只是一些图片的记录  " +
+        "\n" +
+
+        "\n### android内存调用  " +
+        "\n1. 可以看见的  " +
+        "\n要记牢的。  " +
+        "\n文章地址：http://www.jianshu.com/p/5acb7146371b  " +
+        "\n效果图：![Renderings](http://upload-images.jianshu.io/upload_images/4498-6b5002b829fe5b40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)";
+
+//    http://upload-images.jianshu.io/upload_images/4498-6b5002b829fe5b40.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240
+
+
+
+
+    new Vue({
+        el: '#editor',
+        data: {
+            input: indata
+        },
+        computed: {
+            compiledMarkdown: function () {
+                return marked(this.input, { sanitize: true })
+            }
+        },
+        methods: {
+            update: _.debounce(function (e) {
+                this.input = e.target.value
+            }, 300)
+        }
+    })
+
+</script>
+
+</body>
+</html>
