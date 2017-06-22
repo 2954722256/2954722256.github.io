@@ -15,7 +15,6 @@
 
 <div >
     <a class="buttontop" href="javascript:void(0);" onclick="doSee()">切换可见</a>
-    <a class="buttontop" href="javascript:void(0);" onclick="doWrite()">写</a>
 </div>
 
 <div id="editor">
@@ -33,29 +32,34 @@
         }
     }
 
-    function doWrite() {
-        $.post('md/testw.md', function (text) {
-            indata = text;
-            doVue();
-        });
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
     }
 
 
-    var indata = "";
-
     $(function () {
-        $.get('md/test3.md', function (text) {
-            indata = text;
-            doVue();
+        var fileName = GetQueryString("file");
+        if(!fileName){
+            return;
+        }
+//        alert(fileName)
+
+//        $.get('md/test3.md', function (text) {
+        $.get(fileName, function (text) {
+            doVue(text);
         });
     });
 
-    function doVue() {
-
+    function doVue(textData) {
+//        alert(textData +="333");
         new Vue({
             el: '#editor',
             data: {
-                input: indata
+                input: textData
             },
             computed: {
                 compiledMarkdown: function () {
