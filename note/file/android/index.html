@@ -1,0 +1,49 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
+
+<ul class="nav">
+
+    <li onclick="clickDiv('div1')">1 android</li>
+    <div id="div1" >
+        <li>
+            <a class="urlTxt" href="javascript:void(0);" onclick='doJump("file=android/do1.md")' >begin</a>
+            <!--<div class="explain">自己的一些demo</div>-->
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+
+
+</ul>
+
+<script type="text/javascript">
+
+    function doJump(name) {
+//        var html = "../f.html?".concat(name);
+        window.open("../f.html?".concat(name));
+    }
+
+    function doJump2() {
+        window.open("../f.html?file=android/do1.md");
+    }
+
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>

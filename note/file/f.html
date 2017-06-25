@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 通过get获取文件名, 再找到对应的md文件, 做对应的显示 -->
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue.js markdown editor example</title>
+    <link rel="stylesheet" href="../_lib/style.css">
+    <script src="https://unpkg.com/marked@0.3.6"></script>
+    <script src="https://unpkg.com/lodash@4.16.0"></script>
+    <!-- Delete ".min" for console warnings in development -->
+    <!--<script src="../../dist/vue.min.js"></script>-->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div >
+    <a class="buttontop" href="javascript:void(0);" onclick="doSee()">切换可见</a>
+</div>
+
+<div id="editor">
+    <textarea id="prev" :value="input" @input="update"></textarea>
+    <div v-html="compiledMarkdown"></div>
+</div>
+
+<script>
+
+    function doSee() {
+        if($('#prev').is(':hidden')){
+            $("#prev").show(300);
+        }else{
+            $("#prev").hide(300);
+        }
+    }
+
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+
+    $(function () {
+        var fileName = GetQueryString("file");
+        if(!fileName){
+            return;
+        }
+//        alert(fileName)
+
+//        $.get('md/test3.md', function (text) {
+        $.get(fileName, function (text) {
+            doVue(text);
+        });
+    });
+
+    function doVue(textData) {
+//        alert(textData +="333");
+        new Vue({
+            el: '#editor',
+            data: {
+                input: textData
+            },
+            computed: {
+                compiledMarkdown: function () {
+                    return marked(this.input, { sanitize: true })
+                }
+            },
+            methods: {
+                update: _.debounce(function (e) {
+                    this.input = e.target.value
+                }, 300)
+            }
+        })
+    }
+
+
+</script>
+
+</body>
+</html>
