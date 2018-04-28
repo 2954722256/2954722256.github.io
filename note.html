@@ -1,0 +1,48 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+
+<style>
+    .explain {
+        text-indent: 6em;
+    }
+
+    .urlTxt {
+        font-size: 24px;
+    }
+
+</style>
+
+<ul class="nav">
+
+    <li onclick="clickDiv('div2')">vue</li>
+    <div id="div2">
+        <li>
+            <a class="urlTxt" href="vue2/index.html" target="_blank">VUE2</a>
+            <!--<div class="explain">VUE2 的一些demo</div>-->
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+    <li onclick="clickDiv('div3')">vue</li>
+    <div id="div3">
+        <li>
+            <a class="urlTxt" href="note/index.html" target="_blank">NOTE</a>
+            <!--<div class="explain">VUE2 的一些demo</div>-->
+        </li>
+        <hr style="margin: 20px 0;">
+    </div>
+
+
+</ul>
+
+<script type="text/javascript">
+
+    function clickDiv(name) {
+        if($("#"+name).is(':visible')){
+            $("#"+name).hide(300);
+        }else{
+            $("#"+name).show(300);
+        }
+    }
+</script>
